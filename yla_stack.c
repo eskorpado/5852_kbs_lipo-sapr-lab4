@@ -89,6 +89,15 @@ int yla_stack_top(yla_stack* stack, yla_int_type *result)
     return 1;
 }
 
+int yla_stack_tail_delete(yla_stack* stack, yla_int_type tail_size)
+{
+	if (stack->count < tail_size) {
+		return 0;
+	}
+	stack->count -= tail_size;
+	return 1;
+}
+
 int yla_stack_is_empty(yla_stack* stack)
 {
     return stack->count == 0;

@@ -14,7 +14,9 @@
 #    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 
 CC     = gcc
-CFLAGS =
+
+# Compiler warnings were disabled for better perception of test results
+CFLAGS = -w
 
 LN     = gcc
 LNFLAGS=
@@ -26,6 +28,9 @@ TESTEXE=tests
 
 OBJ=\
 yla_stack.o\
+yla_compliance.o\
+yla_program_ops.o\
+yla_word.o\
 yla_vm.o
 
 MAINOBJ=yla_vm_main.o
@@ -34,7 +39,7 @@ TESTOBJ=\
 yla_tests.o\
 yla_test_test.o\
 yla_stack_test.o\
-yla_test_gencode.o\
+yla_program_ops.o\
 yla_vm_test1.o
 
 
